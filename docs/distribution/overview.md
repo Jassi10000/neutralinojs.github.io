@@ -39,6 +39,24 @@ The following guides are not documented yet.
 - [Creating a portable application package for macOS](#)
 - [Creating a portable application package for Windows](#)
 
+### Creating a portable application package for macOS
+
+The `neu build` process creates a binary file for macOS, but that file can not be executed by a double-click action on macOS as a normal application. 
+The following steps shows how to create a simple double-clickable executable on macOS.
+
+1. Open Terminal.
+2. Navigate to the `/dist/myapp` directory:
+3. Change the binary file type to `.app` file type:
+```
+mv <mac_binary> <mac_binary>.app
+```
+4. Give the app file the required execution permissions:
+```
+chmod +x <mac_binary>.app
+```
+
+Now you can execute the app by double-click.
+
 ## Creating application installers
 
 The following guides are not documented yet.
